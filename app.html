@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mata Mosquito</title>
+	<link rel="icon" href="imagens/mata_mosquito.png">
+
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+
+	<script src="jogo.js"></script>
+
+</head>
+<body onresize="ajustaTamanhoPalcoJogo()">
+	<!-- Elementos do Jogo: vida, cronometro -->
+		<div class="painel">
+			<div class="vidas">
+				<img id="v1" src="imagens/coracao_cheio.png">
+				<img id="v2" src="imagens/coracao_cheio.png">
+				<img id="v3" src="imagens/coracao_cheio.png">
+				<img id="v4" src="imagens/coracao_cheio.png">
+				<img id="v5" src="imagens/coracao_cheio.png">
+				
+			</div>
+
+			<div class="cronometro">Tempo restante:<span id="cronometro"></span></div>
+
+			<div class="score">Score:<span id="score"></span></div>
+
+		</div>
+
+	<!-- Java Script-->
+		<script>
+
+			document.getElementById('cronometro').innerHTML = tempo
+
+			var criaMosquito = setInterval(function(){
+			  posicaoRandomica()
+			}, criaMosquitoTempo)
+
+			document.getElementById('score').innerHTML = pontos
+
+
+
+		</script>
+	</body>
+</html>
